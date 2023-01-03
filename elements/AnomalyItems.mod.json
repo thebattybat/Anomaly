@@ -1,0 +1,11 @@
+{
+  "_fv": 28,
+  "_type": "tab",
+  "definition": {
+    "name": "Anomaly - Items",
+    "icon": {
+      "value": "CUSTOM:AlmondWater"
+    },
+    "showSearch": false
+  }
+}

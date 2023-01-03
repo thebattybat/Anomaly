@@ -1,0 +1,17 @@
+{
+  "_fv": 28,
+  "_type": "tag",
+  "definition": {
+    "type": "Entities",
+    "items": [],
+    "blocks": [],
+    "functions": [],
+    "entities": [
+      {
+        "value": "CUSTOM:BackroomsEntity"
+      }
+    ],
+    "name": "entity_backrooms",
+    "namespace": "minecraft"
+  }
+}

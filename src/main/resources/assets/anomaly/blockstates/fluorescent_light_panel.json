@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "anomaly:block/fluorescent_light_panel"
+    },
+    "facing=east": {
+      "model": "anomaly:block/fluorescent_light_panel",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "anomaly:block/fluorescent_light_panel",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "anomaly:block/fluorescent_light_panel",
+      "y": 270
+    }
+  }
+}

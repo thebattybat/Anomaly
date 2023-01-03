@@ -1,0 +1,8 @@
+{
+  "parent": "anomaly:custom/level_1_tube_light",
+  "textures": {
+    "all": "anomaly:blocks/texture_10",
+    "particle": "anomaly:blocks/texture_10",
+    "0": "anomaly:blocks/texture_10"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "block/door_top",
+  "textures": {
+    "bottom": "anomaly:blocks/new_piskel-2.png_3-2.png_2",
+    "top": "anomaly:blocks/topdoor"
+  }
+}

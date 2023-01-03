@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "anomaly:blocks/placer",
+    "up": "anomaly:blocks/placer",
+    "north": "anomaly:blocks/placer",
+    "east": "anomaly:blocks/placer",
+    "south": "anomaly:blocks/placer",
+    "west": "anomaly:blocks/placer",
+    "particle": "anomaly:blocks/placer"
+  }
+}

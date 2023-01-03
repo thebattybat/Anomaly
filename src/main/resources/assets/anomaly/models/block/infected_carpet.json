@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "anomaly:blocks/sprite_0",
+    "particle": "anomaly:blocks/sprite_0"
+  }
+}

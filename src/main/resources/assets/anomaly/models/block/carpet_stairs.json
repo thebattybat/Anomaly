@@ -1,0 +1,8 @@
+{
+  "parent": "block/stairs",
+  "textures": {
+    "bottom": "anomaly:blocks/thingy1",
+    "top": "anomaly:blocks/thingy1",
+    "side": "anomaly:blocks/thingy1"
+  }
+}

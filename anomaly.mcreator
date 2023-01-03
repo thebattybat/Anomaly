@@ -1,0 +1,751 @@
+{
+  "mod_elements": [
+    {
+      "name": "FluorescentLightPanel",
+      "type": "block",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fluorescent_light_panel"
+    },
+    {
+      "name": "FluorescentLightPanelFlickering",
+      "type": "block",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fluorescent_light_panel_flickering"
+    },
+    {
+      "name": "FluorescentLightPanelUpdateTick",
+      "type": "procedure",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fluorescent_light_panel_update_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Wallpaper",
+      "type": "block",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wallpaper"
+    },
+    {
+      "name": "Tile",
+      "type": "block",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tile"
+    },
+    {
+      "name": "Carpet",
+      "type": "block",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "carpet"
+    },
+    {
+      "name": "MazesNAnomalies",
+      "type": "tab",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mazes_n_anomalies"
+    },
+    {
+      "name": "BackroomsBiome",
+      "type": "biome",
+      "sortid": 10,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "level_0_biome"
+    },
+    {
+      "name": "Backrooms",
+      "type": "dimension",
+      "sortid": 10,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "level_0",
+      "metadata": {
+        "ep": false
+      }
+    },
+    {
+      "name": "BackroomsEntity",
+      "type": "livingentity",
+      "sortid": 23,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mold_creature"
+    },
+    {
+      "name": "EntityBackrooms",
+      "type": "tag",
+      "sortid": 27,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "entity_backrooms"
+    },
+    {
+      "name": "PlacerUpdateTick",
+      "type": "procedure",
+      "sortid": 28,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "placer_update_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Placer",
+      "type": "block",
+      "sortid": 28,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "placer"
+    },
+    {
+      "name": "InfectedWallpaper",
+      "type": "block",
+      "sortid": 29,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "infected_wallpaper"
+    },
+    {
+      "name": "InfectedCarpet",
+      "type": "block",
+      "sortid": 30,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "infected_carpet"
+    },
+    {
+      "name": "InfectedTile",
+      "type": "block",
+      "sortid": 31,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "infected_tile"
+    },
+    {
+      "name": "Mold",
+      "type": "block",
+      "sortid": 32,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mold"
+    },
+    {
+      "name": "Level0ExitToLevel1",
+      "type": "block",
+      "sortid": 33,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "level_0_exit_to_level_1"
+    },
+    {
+      "name": "ExitSign",
+      "type": "block",
+      "sortid": 34,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "exit_sign"
+    },
+    {
+      "name": "TubeLight",
+      "type": "block",
+      "sortid": 35,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tube_light"
+    },
+    {
+      "name": "WhiteBricks",
+      "type": "block",
+      "sortid": 36,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "white_bricks"
+    },
+    {
+      "name": "Cement",
+      "type": "block",
+      "sortid": 37,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cement"
+    },
+    {
+      "name": "PaintedCement",
+      "type": "block",
+      "sortid": 38,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "painted_cement"
+    },
+    {
+      "name": "FSign",
+      "type": "block",
+      "sortid": 39,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "f_sign"
+    },
+    {
+      "name": "ASign",
+      "type": "block",
+      "sortid": 40,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "a_sign"
+    },
+    {
+      "name": "ESign",
+      "type": "block",
+      "sortid": 41,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "e_sign"
+    },
+    {
+      "name": "AlmondWater",
+      "type": "item",
+      "sortid": 42,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "almond_water"
+    },
+    {
+      "name": "EmptyAlmondWater",
+      "type": "item",
+      "sortid": 43,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "empty_almond_water"
+    },
+    {
+      "name": "AnomalyItems",
+      "type": "tab",
+      "sortid": 44,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "anomaly_items"
+    },
+    {
+      "name": "Crate",
+      "type": "block",
+      "sortid": 45,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crate"
+    },
+    {
+      "name": "AlmondWaterPlayerFinishesUsingItem",
+      "type": "procedure",
+      "sortid": 46,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "almond_water_player_finishes_using_item",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MetalDoor",
+      "type": "block",
+      "sortid": 47,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "metal_door"
+    },
+    {
+      "name": "WhiteCement",
+      "type": "block",
+      "sortid": 48,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "white_cement"
+    },
+    {
+      "name": "Level1Placer",
+      "type": "block",
+      "sortid": 49,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "level_1_placer"
+    },
+    {
+      "name": "Level1",
+      "type": "dimension",
+      "sortid": 50,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "level_1",
+      "metadata": {
+        "ep": false
+      }
+    },
+    {
+      "name": "Level1Biome",
+      "type": "biome",
+      "sortid": 51,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "level_1_biome"
+    },
+    {
+      "name": "Init",
+      "type": "procedure",
+      "sortid": 52,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "init",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Level",
+      "type": "command",
+      "sortid": 53,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "level"
+    },
+    {
+      "name": "LevelCommandExecuted",
+      "type": "procedure",
+      "sortid": 53,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "level_command_executed",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "cmdparams",
+            "type": "map"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BackroomsAdvancement",
+      "type": "achievement",
+      "sortid": 54,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "backrooms_advancement"
+    },
+    {
+      "name": "Level0Advancement",
+      "type": "achievement",
+      "sortid": 55,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "level_0_advancement"
+    },
+    {
+      "name": "Level1Advancement",
+      "type": "achievement",
+      "sortid": 56,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "level_1_advancement"
+    },
+    {
+      "name": "Level1PlacerUpdateTick",
+      "type": "procedure",
+      "sortid": 57,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "level_1_placer_update_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ParkingPlacer",
+      "type": "block",
+      "sortid": 58,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "parking_placer"
+    },
+    {
+      "name": "ImmediateParkingPlacer",
+      "type": "block",
+      "sortid": 59,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "immediate_parking_placer"
+    },
+    {
+      "name": "ImmediateParkingPlacerBlockAdded",
+      "type": "procedure",
+      "sortid": 60,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "immediate_parking_placer_block_added",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ParkingPlacerWhenBlockAdded",
+      "type": "procedure",
+      "sortid": 61,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "parking_placer_when_block_added",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CarpetStairs",
+      "type": "block",
+      "sortid": 62,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "carpet_stairs"
+    },
+    {
+      "name": "Drawer",
+      "type": "block",
+      "sortid": 63,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "drawer"
+    },
+    {
+      "name": "DrawerGui",
+      "type": "gui",
+      "sortid": 64,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "drawer_gui"
+    },
+    {
+      "name": "Desktop",
+      "type": "block",
+      "sortid": 65,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "desktop"
+    },
+    {
+      "name": "Chair",
+      "type": "block",
+      "sortid": 66,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "chair"
+    },
+    {
+      "name": "Smiler",
+      "type": "livingentity",
+      "sortid": 67,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "smiler"
+    },
+    {
+      "name": "NullBlock",
+      "type": "block",
+      "sortid": 68,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "null_block"
+    },
+    {
+      "name": "Teleport2level1",
+      "type": "procedure",
+      "sortid": 69,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "teleport_2level_1",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "cmdparams",
+            "type": "map"
+          }
+        ]
+      }
+    }
+  ],
+  "variable_elements": [
+    {
+      "name": "jumpscare",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "rand",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "randlevel1",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "parkingrand",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    }
+  ],
+  "sound_elements": [
+    {
+      "name": "carpetfootsteps",
+      "files": [
+        "step4",
+        "step3",
+        "step2",
+        "step1"
+      ],
+      "category": "player",
+      "subtitle": ""
+    },
+    {
+      "name": "carpetbreakplace",
+      "files": [
+        "placebreak"
+      ],
+      "category": "block",
+      "subtitle": ""
+    },
+    {
+      "name": "level0ambient",
+      "files": [
+        "levelzero"
+      ],
+      "category": "ambient",
+      "subtitle": ""
+    }
+  ],
+  "language_map": {
+    "en_us": {
+      "subtitles.lighthum": "Lights buzzing",
+      "block.mazes_and_anomalies.level_0_exit_to_level_1": "Wallpaper",
+      "subtitles.buzzing": "Light buzzes",
+      "subtitles.level0ambient": "",
+      "block.mazes_and_anomalies.fluorescent_light_panel_flickering": "Fluorescent Light Panel",
+      "block.mazes_and_anomalies.infected_wallpaper": "Infected Wallpaper",
+      "block.anomaly.infected_wallpaper": "Infected Wallpaper",
+      "block.mazes_and_anomalies.f_sign": "Painted Cement",
+      "block.anomaly.e_sign": "Painted Cement",
+      "block.mazes_and_anomalies.exit_sign": "Exit Sign",
+      "item.anomaly.mold_creature_spawn_egg": "Mold Creature Spawn Egg",
+      "block.anomaly.cement": "Cement",
+      "block.anomaly.wallpaper": "Wallpaper",
+      "biome.anomaly.level_1_biome": "Level 1",
+      "block.mazes_and_anomalies.e_sign": "Painted Cement",
+      "item.mazes_and_anomalies.level_0": "Backrooms Portal Igniter",
+      "block.anomaly.infected_carpet": "Infected Carpet",
+      "entity.mazes_and_anomalies.backrooms_entity": "Mold Creature",
+      "block.anomaly.f_sign": "Painted Cement",
+      "item.mazes_and_anomalies.backrooms_entity_spawn_egg": "Mold Creature Spawn Egg",
+      "block.anomaly.desktop": "Desktop",
+      "block.mazes_and_anomalies.cement": "Cement",
+      "itemGroup.tabanomaly_items": "Anomaly - Items",
+      "block.mazes_and_anomalies.wallpaper": "Wallpaper",
+      "advancements.backrooms_advancement.descr": "Infinite rooms to explore",
+      "block.anomaly.placer": "Placer",
+      "block.mazes_and_anomalies.mold": "Mold",
+      "block.mazes_and_anomalies.placer": "Placer",
+      "block.anomaly.level_0_exit_to_level_1": "Wallpaper",
+      "block.anomaly.parking_placer": "Level 1 Placer",
+      "advancements.level_1_advancement.descr": "Find an exit in Level 0",
+      "item.anomaly.smiler_spawn_egg": "Smiler Spawn Egg",
+      "subtitles.flicker": "Light flickers",
+      "block.anomaly.drawer": "Drawer",
+      "block.anomaly.carpet_stairs": "Carpet Stairs",
+      "block.anomaly.infected_tile": "Infected Tile",
+      "block.anomaly.crate": "Crate",
+      "advancements.level_0_advancement.descr": "Enter Level 0 by noclipping out of reality",
+      "block.anomaly.null_block": "Null",
+      "block.mazes_and_anomalies.tile": "Ceiling Tile",
+      "item.anomaly.level_0": "Backrooms Portal Igniter",
+      "block.anomaly.painted_cement": "Painted Cement",
+      "subtitles.carpetfootsteps": "",
+      "block.anomaly.metal_door": "Metal Door",
+      "biome.mazes_and_anomalies.level_0_biome": "Level 0",
+      "item.anomaly.empty_almond_water": "Empty Almond Water",
+      "block.anomaly.fluorescent_light_panel_flickering": "Fluorescent Light Panel",
+      "block.anomaly.white_bricks": "White Bricks",
+      "entity.anomaly.smiler": "Smiler",
+      "itemGroup.tabmazes_n_anomalies": "Anomaly - Blocks",
+      "subtitles.carpetbreakplace": "",
+      "block.anomaly.white_cement": "White Cement",
+      "advancements.level_0_advancement.title": "Noclipped",
+      "block.anomaly.chair": "Chair",
+      "entity.anomaly.mold_creature": "Mold Creature",
+      "block.mazes_and_anomalies.infected_tile": "Infected Tile",
+      "block.mazes_and_anomalies.white_bricks": "White Bricks",
+      "item.anomaly.level_1": "Backrooms Portal Igniter",
+      "block.mazes_and_anomalies.infected_carpet": "Infected Carpet",
+      "block.anomaly.level_1_placer": "Level 1 Placer",
+      "block.anomaly.tube_light": "Tube Light",
+      "block.anomaly.exit_sign": "Exit Sign",
+      "block.mazes_and_anomalies.a_sign": "Painted Cement",
+      "block.anomaly.tile": "Ceiling Tile",
+      "block.anomaly.immediate_parking_placer": "Level 1 Placer",
+      "block.anomaly.carpet": "Carpet",
+      "block.anomaly.mold": "Mold",
+      "block.mazes_and_anomalies.painted_cement": "Painted Cement",
+      "block.anomaly.a_sign": "Painted Cement",
+      "block.mazes_and_anomalies.carpet": "Carpet",
+      "item.anomaly.almond_water": "Almond Water",
+      "block.mazes_and_anomalies.tube_light": "Tube Light",
+      "advancements.backrooms_advancement.title": "Anomaly",
+      "block.mazes_and_anomalies.fluorescent_light_panel": "Fluorescent Light Panel",
+      "biome.anomaly.level_0_biome": "Level 0",
+      "advancements.level_1_advancement.title": "Deeper",
+      "block.anomaly.fluorescent_light_panel": "Fluorescent Light Panel"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": []
+  },
+  "workspaceSettings": {
+    "modid": "anomaly",
+    "modName": "Anomaly",
+    "version": "1.0.0",
+    "description": "Endless rooms to explore",
+    "author": "themcrau1",
+    "websiteURL": "https://mcreator.net",
+    "license": "Academic Free License v3.0",
+    "disableForgeVersionCheck": true,
+    "serverSideOnly": false,
+    "modPicture": "wow",
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "forge-1.18.2",
+    "credits": "This mod was made using MCreator: https://mcreator.net/about",
+    "modElementsPackage": "net.mcreator.anomaly",
+    "lockBaseModFiles": false
+  },
+  "mcreatorVersion": 202200120510
+}

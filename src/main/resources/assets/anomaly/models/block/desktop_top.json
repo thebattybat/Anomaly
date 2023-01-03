@@ -1,0 +1,8 @@
+{
+  "parent": "block/slab_top",
+  "textures": {
+    "bottom": "anomaly:blocks/new_piskel-1.png_5",
+    "top": "anomaly:blocks/new_piskel-1.png_5",
+    "side": "anomaly:blocks/new_piskel-1.png_5"
+  }
+}

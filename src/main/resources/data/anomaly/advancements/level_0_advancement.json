@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "anomaly:wallpaper"
+    },
+    "title": {
+      "translate": "advancements.level_0_advancement.title"
+    },
+    "description": {
+      "translate": "advancements.level_0_advancement.descr"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "level_0_advancement": {
+      "trigger": "minecraft:changed_dimension",
+      "conditions": {
+        "to": "anomaly:level_0"
+      }
+    }
+  },
+  "parent": "anomaly:backrooms_advancement"
+}

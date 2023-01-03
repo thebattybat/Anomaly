@@ -1,0 +1,26 @@
+{
+  "display": {
+    "background": "anomaly:textures/imageedit_9_3979800100_16x16-1.png_2-2.png.png",
+    "icon": {
+      "item": "anomaly:chair"
+    },
+    "title": {
+      "translate": "advancements.backrooms_advancement.title"
+    },
+    "description": {
+      "translate": "advancements.backrooms_advancement.descr"
+    },
+    "frame": "goal",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": true
+  },
+  "criteria": {
+    "backrooms_advancement": {
+      "trigger": "minecraft:changed_dimension",
+      "conditions": {
+        "to": "anomaly:level_0"
+      }
+    }
+  }
+}

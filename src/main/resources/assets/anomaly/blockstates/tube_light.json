@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "anomaly:block/tube_light"
+    },
+    "facing=east": {
+      "model": "anomaly:block/tube_light",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "anomaly:block/tube_light",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "anomaly:block/tube_light",
+      "y": 270
+    }
+  }
+}

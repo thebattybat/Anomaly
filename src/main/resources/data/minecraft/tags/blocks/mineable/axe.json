@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "anomaly:wallpaper",
+    "anomaly:infected_wallpaper",
+    "anomaly:level_0_exit_to_level_1"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "replace": false,
+  "values": [
+    "anomaly:fluorescent_light_panel",
+    "anomaly:fluorescent_light_panel_flickering",
+    "anomaly:exit_sign",
+    "anomaly:white_bricks",
+    "anomaly:cement",
+    "anomaly:painted_cement",
+    "anomaly:f_sign",
+    "anomaly:a_sign",
+    "anomaly:e_sign",
+    "anomaly:metal_door",
+    "anomaly:white_cement",
+    "anomaly:drawer",
+    "anomaly:desktop"
+  ]
+}

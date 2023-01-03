@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "anomaly:metal_door"
+    },
+    "title": {
+      "translate": "advancements.level_1_advancement.title"
+    },
+    "description": {
+      "translate": "advancements.level_1_advancement.descr"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "level_1_advancement": {
+      "trigger": "minecraft:changed_dimension",
+      "conditions": {
+        "to": "anomaly:level_1"
+      }
+    }
+  },
+  "parent": "anomaly:level_0_advancement"
+}

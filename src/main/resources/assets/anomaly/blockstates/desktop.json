@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "anomaly:block/desktop"
+    },
+    "type=top": {
+      "model": "anomaly:block/desktop_top"
+    },
+    "type=double": {
+      "model": "anomaly:block/desktop_full"
+    }
+  }
+}

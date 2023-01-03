@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "anomaly:blocks/new_piskel-1.png_5",
+    "up": "anomaly:blocks/new_piskel-1.png_5",
+    "north": "anomaly:blocks/new_piskel-2.png_4",
+    "east": "anomaly:blocks/new_piskel-1.png_5",
+    "south": "anomaly:blocks/new_piskel-1.png_5",
+    "west": "anomaly:blocks/new_piskel-1.png_5",
+    "particle": "anomaly:blocks/new_piskel-1.png_5"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "carpetfootsteps": {
+    "category": "player",
+    "sounds": [
+      {
+        "name": "anomaly:step4",
+        "stream": false
+      },
+      {
+        "name": "anomaly:step3",
+        "stream": false
+      },
+      {
+        "name": "anomaly:step2",
+        "stream": false
+      },
+      {
+        "name": "anomaly:step1",
+        "stream": false
+      }
+    ]
+  },
+  "carpetbreakplace": {
+    "category": "block",
+    "sounds": [
+      {
+        "name": "anomaly:placebreak",
+        "stream": false
+      }
+    ]
+  },
+  "level0ambient": {
+    "category": "ambient",
+    "sounds": [
+      {
+        "name": "anomaly:levelzero",
+        "stream": false
+      }
+    ]
+  }
+}
