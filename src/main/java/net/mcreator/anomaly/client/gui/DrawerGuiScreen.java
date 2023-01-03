@@ -33,7 +33,7 @@ public class DrawerGuiScreen extends AbstractContainerScreen<DrawerGuiMenu> {
 		this.imageHeight = 166;
 	}
 
-	private static final ResourceLocation texture = new ResourceLocation("anomaly:textures/drawer_gui.png");
+	private static final ResourceLocation texture = new ResourceLocation("anomaly:textures/screens/drawer_gui.png");
 
 	@Override
 	public void render(PoseStack ms, int mouseX, int mouseY, float partialTicks) {

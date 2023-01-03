@@ -15,6 +15,6 @@ public class BackroomsEntityRenderer extends MobRenderer<BackroomsEntityEntity, 
 
 	@Override
 	public ResourceLocation getTextureLocation(BackroomsEntityEntity entity) {
-		return new ResourceLocation("anomaly:textures/texture_6.png");
+		return new ResourceLocation("anomaly:textures/entities/texture_6.png");
 	}
 }

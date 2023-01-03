@@ -16,13 +16,13 @@ public class SmilerRenderer extends MobRenderer<SmilerEntity, Modelsmiler<Smiler
 		this.addLayer(new EyesLayer<SmilerEntity, Modelsmiler<SmilerEntity>>(this) {
 			@Override
 			public RenderType renderType() {
-				return RenderType.eyes(new ResourceLocation("anomaly:textures/texture_18.png"));
+				return RenderType.eyes(new ResourceLocation("anomaly:textures/entities/texture_18.png"));
 			}
 		});
 	}
 
 	@Override
 	public ResourceLocation getTextureLocation(SmilerEntity entity) {
-		return new ResourceLocation("anomaly:textures/texture_18.png");
+		return new ResourceLocation("anomaly:textures/entities/texture_18.png");
 	}
 }

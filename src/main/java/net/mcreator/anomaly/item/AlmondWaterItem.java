@@ -28,11 +28,6 @@ public class AlmondWaterItem extends Item {
 	}
 
 	@Override
-	public int getUseDuration(ItemStack itemstack) {
-		return 32;
-	}
-
-	@Override
 	public ItemStack finishUsingItem(ItemStack itemstack, Level world, LivingEntity entity) {
 		ItemStack retval = new ItemStack(AnomalyModItems.EMPTY_ALMOND_WATER.get());
 		super.finishUsingItem(itemstack, world, entity);
