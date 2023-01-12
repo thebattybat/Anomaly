@@ -1,7 +1,7 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "anomaly:blocks/sprite_1",
-    "particle": "anomaly:blocks/sprite_1"
+    "all": "anomaly:blocks/imageedit_1_4000114494-1.png",
+    "particle": "anomaly:blocks/imageedit_1_4000114494-1.png"
   }
 }
