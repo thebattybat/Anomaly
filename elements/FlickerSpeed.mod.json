@@ -1,0 +1,12 @@
+{
+  "_fv": 34,
+  "_type": "gamerule",
+  "definition": {
+    "type": "Number",
+    "displayName": "Flicker Speed",
+    "description": "Sets the speed of flickering",
+    "category": "UPDATES",
+    "defaultValueLogic": false,
+    "defaultValueNumber": 5000
+  }
+}

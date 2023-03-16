@@ -35,7 +35,7 @@
     ],
     "name": "Carpet",
     "specialInfo": [],
-    "hardness": 2.0,
+    "hardness": 1.0,
     "resistance": 10.0,
     "hasGravity": false,
     "isWaterloggable": false,
@@ -54,9 +54,9 @@
     "canRedstoneConnect": false,
     "lightOpacity": 15,
     "material": {
-      "value": "CLOTH"
+      "value": "ROCK"
     },
-    "tickRate": 10,
+    "tickRate": 0,
     "tickRandomly": false,
     "isReplaceable": false,
     "canProvidePower": false,
@@ -79,7 +79,7 @@
     "isNotColidable": false,
     "isCustomSoundType": true,
     "soundOnStep": {
-      "value": "CLOTH"
+      "value": "GROUND"
     },
     "breakSound": {
       "value": "CUSTOM:carpetbreakplace"

@@ -53,22 +53,6 @@
       "registry_name": "wallpaper"
     },
     {
-      "name": "Tile",
-      "type": "block",
-      "sortid": 7,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "tile"
-    },
-    {
-      "name": "Carpet",
-      "type": "block",
-      "sortid": 8,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "carpet"
-    },
-    {
       "name": "MazesNAnomalies",
       "type": "tab",
       "sortid": 9,
@@ -585,6 +569,105 @@
           }
         ]
       }
+    },
+    {
+      "name": "Level1tp",
+      "type": "procedure",
+      "sortid": 70,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "level_1tp",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "FlickerSpeed",
+      "type": "gamerule",
+      "sortid": 71,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "flickerSpeed",
+      "metadata": {
+        "type": "number"
+      }
+    },
+    {
+      "name": "PowerTick",
+      "type": "procedure",
+      "sortid": 71,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "power_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Carpet",
+      "type": "block",
+      "sortid": 73,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "carpet"
+    },
+    {
+      "name": "Tile",
+      "type": "block",
+      "sortid": 74,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tile"
+    },
+    {
+      "name": "TurnOnTick",
+      "type": "procedure",
+      "sortid": 75,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "turn_on_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -640,6 +723,14 @@
       ],
       "category": "ambient",
       "subtitle": ""
+    },
+    {
+      "name": "lightpower",
+      "files": [
+        "power"
+      ],
+      "category": "block",
+      "subtitle": "Light flickers"
     }
   ],
   "language_map": {
@@ -648,6 +739,7 @@
       "block.mazes_and_anomalies.level_0_exit_to_level_1": "Wallpaper",
       "subtitles.buzzing": "Light buzzes",
       "subtitles.level0ambient": "",
+      "gamerule.flickerSpeed.description": "Sets the speed of flickering",
       "block.mazes_and_anomalies.fluorescent_light_panel_flickering": "Fluorescent Light Panel",
       "block.mazes_and_anomalies.infected_wallpaper": "Infected Wallpaper",
       "block.anomaly.infected_wallpaper": "Infected Wallpaper",
@@ -693,6 +785,7 @@
       "block.anomaly.fluorescent_light_panel_flickering": "Fluorescent Light Panel",
       "block.anomaly.white_bricks": "White Bricks",
       "entity.anomaly.smiler": "Smiler",
+      "gamerule.flickerSpeed": "Flicker Speed",
       "itemGroup.tabmazes_n_anomalies": "Anomaly - Blocks",
       "subtitles.carpetbreakplace": "",
       "block.anomaly.white_cement": "White Cement",
@@ -705,6 +798,7 @@
       "block.mazes_and_anomalies.infected_carpet": "Infected Carpet",
       "block.anomaly.level_1_placer": "Level 1 Placer",
       "block.anomaly.tube_light": "Tube Light",
+      "subtitles.lightpower": "Light flickers",
       "block.anomaly.exit_sign": "Exit Sign",
       "block.mazes_and_anomalies.a_sign": "Painted Cement",
       "block.anomaly.tile": "Ceiling Tile",

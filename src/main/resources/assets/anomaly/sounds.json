@@ -37,5 +37,15 @@
         "stream": false
       }
     ]
+  },
+  "lightpower": {
+    "category": "block",
+    "subtitle": "subtitles.lightpower",
+    "sounds": [
+      {
+        "name": "anomaly:power",
+        "stream": false
+      }
+    ]
   }
 }

@@ -20,11 +20,14 @@ import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.item.TieredItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
+import net.mcreator.anomaly.procedures.PowerTickProcedure;
 import net.mcreator.anomaly.procedures.FluorescentLightPanelUpdateTickProcedure;
 
+import java.util.Random;
 import java.util.List;
 import java.util.Collections;
 
@@ -78,6 +81,18 @@ public class FluorescentLightPanelBlock extends Block {
 	@Override
 	public void onPlace(BlockState blockstate, Level world, BlockPos pos, BlockState oldState, boolean moving) {
 		super.onPlace(blockstate, world, pos, oldState, moving);
+		world.scheduleTick(pos, this, 10);
 		FluorescentLightPanelUpdateTickProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
+	}
+
+	@Override
+	public void tick(BlockState blockstate, ServerLevel world, BlockPos pos, Random random) {
+		super.tick(blockstate, world, pos, random);
+		int x = pos.getX();
+		int y = pos.getY();
+		int z = pos.getZ();
+
+		PowerTickProcedure.execute(world, x, y, z);
+		world.scheduleTick(pos, this, 10);
 	}
 }

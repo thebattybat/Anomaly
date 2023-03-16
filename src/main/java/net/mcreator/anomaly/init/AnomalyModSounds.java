@@ -21,6 +21,7 @@ public class AnomalyModSounds {
 		REGISTRY.put(new ResourceLocation("anomaly", "carpetfootsteps"), new SoundEvent(new ResourceLocation("anomaly", "carpetfootsteps")));
 		REGISTRY.put(new ResourceLocation("anomaly", "carpetbreakplace"), new SoundEvent(new ResourceLocation("anomaly", "carpetbreakplace")));
 		REGISTRY.put(new ResourceLocation("anomaly", "level0ambient"), new SoundEvent(new ResourceLocation("anomaly", "level0ambient")));
+		REGISTRY.put(new ResourceLocation("anomaly", "lightpower"), new SoundEvent(new ResourceLocation("anomaly", "lightpower")));
 	}
 
 	@SubscribeEvent

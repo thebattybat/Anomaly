@@ -7,12 +7,12 @@
         "value": "CUSTOM:BackroomsBiome"
       }
     ],
-    "worldGenType": "Nether like gen",
+    "worldGenType": "Normal world gen",
     "mainFillerBlock": {
-      "value": "Blocks.AIR"
+      "value": "CUSTOM:Wallpaper"
     },
     "fluidBlock": {
-      "value": "Blocks.AIR"
+      "value": "CUSTOM:Wallpaper"
     },
     "canRespawnHere": false,
     "hasFog": false,

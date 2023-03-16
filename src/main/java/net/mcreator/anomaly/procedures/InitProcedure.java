@@ -32,7 +32,7 @@ public class InitProcedure {
 			LevelAccessor _worldorig = world;
 			world = _origLevel.getServer().getLevel(ResourceKey.create(Registry.DIMENSION_REGISTRY, new ResourceLocation("anomaly:level_0")));
 			if (world != null) {
-				world.setBlock(new BlockPos(0, 127, 0), AnomalyModBlocks.PLACER.get().defaultBlockState(), 3);
+				world.setBlock(new BlockPos(0, 30, 0), AnomalyModBlocks.PLACER.get().defaultBlockState(), 3);
 			}
 			world = _worldorig;
 		}

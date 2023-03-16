@@ -26,8 +26,6 @@ public class AnomalyModItems {
 	public static final RegistryObject<Item> FLUORESCENT_LIGHT_PANEL_FLICKERING = block(AnomalyModBlocks.FLUORESCENT_LIGHT_PANEL_FLICKERING,
 			AnomalyModTabs.TAB_MAZES_N_ANOMALIES);
 	public static final RegistryObject<Item> WALLPAPER = block(AnomalyModBlocks.WALLPAPER, AnomalyModTabs.TAB_MAZES_N_ANOMALIES);
-	public static final RegistryObject<Item> TILE = block(AnomalyModBlocks.TILE, AnomalyModTabs.TAB_MAZES_N_ANOMALIES);
-	public static final RegistryObject<Item> CARPET = block(AnomalyModBlocks.CARPET, AnomalyModTabs.TAB_MAZES_N_ANOMALIES);
 	public static final RegistryObject<Item> MOLD_CREATURE = REGISTRY.register("mold_creature_spawn_egg",
 			() -> new ForgeSpawnEggItem(AnomalyModEntities.MOLD_CREATURE, -13421773, -16777216, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 	public static final RegistryObject<Item> PLACER = block(AnomalyModBlocks.PLACER, null);
@@ -59,6 +57,8 @@ public class AnomalyModItems {
 	public static final RegistryObject<Item> SMILER = REGISTRY.register("smiler_spawn_egg",
 			() -> new ForgeSpawnEggItem(AnomalyModEntities.SMILER, -16777216, -1, new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
 	public static final RegistryObject<Item> NULL_BLOCK = block(AnomalyModBlocks.NULL_BLOCK, null);
+	public static final RegistryObject<Item> CARPET = block(AnomalyModBlocks.CARPET, AnomalyModTabs.TAB_MAZES_N_ANOMALIES);
+	public static final RegistryObject<Item> TILE = block(AnomalyModBlocks.TILE, AnomalyModTabs.TAB_MAZES_N_ANOMALIES);
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block, CreativeModeTab tab) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties().tab(tab)));

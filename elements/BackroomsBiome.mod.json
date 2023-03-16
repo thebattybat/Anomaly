@@ -4,10 +4,10 @@
   "definition": {
     "name": "Level 0",
     "groundBlock": {
-      "value": "Blocks.AIR"
+      "value": "Blocks.BEDROCK"
     },
     "undergroundBlock": {
-      "value": "Blocks.AIR"
+      "value": "Blocks.BEDROCK"
     },
     "underwaterBlock": {
       "value": ""

@@ -16,7 +16,7 @@ import java.util.Collections;
 
 public class TileBlock extends Block {
 	public TileBlock() {
-		super(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.STONE).strength(-1, 3600000));
+		super(BlockBehaviour.Properties.of(Material.STONE).sound(SoundType.WOOD).strength(-1, 3600000));
 	}
 
 	@Override

@@ -39,9 +39,9 @@ public class LevelCommandExecutedProcedure {
 			}
 			{
 				Entity _ent = entity;
-				_ent.teleportTo(0, 131, 0);
+				_ent.teleportTo(0, 34, 0);
 				if (_ent instanceof ServerPlayer _serverPlayer)
-					_serverPlayer.connection.teleport(0, 131, 0, _ent.getYRot(), _ent.getXRot());
+					_serverPlayer.connection.teleport(0, 34, 0, _ent.getYRot(), _ent.getXRot());
 			}
 		} else if ((cmdparams.containsKey("0") ? cmdparams.get("0").toString() : "").equals("1")) {
 			if (entity instanceof ServerPlayer _player && !_player.level.isClientSide()) {

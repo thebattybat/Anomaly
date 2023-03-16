@@ -19,7 +19,7 @@ import java.util.Collections;
 
 public class CarpetBlock extends Block {
 	public CarpetBlock() {
-		super(BlockBehaviour.Properties.of(Material.WOOL)
+		super(BlockBehaviour.Properties.of(Material.STONE)
 				.sound(new ForgeSoundType(1.0f, 1.0f, () -> new SoundEvent(new ResourceLocation("anomaly:carpetbreakplace")),
 						() -> new SoundEvent(new ResourceLocation("anomaly:carpetfootsteps")),
 						() -> new SoundEvent(new ResourceLocation("anomaly:carpetbreakplace")),

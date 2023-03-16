@@ -15,6 +15,8 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.client.renderer.DimensionSpecialEffects;
 
+import net.mcreator.anomaly.init.AnomalyModBlocks;
+
 import java.util.Set;
 import java.util.HashSet;
 
@@ -27,9 +29,9 @@ public class BackroomsDimension {
 		@SubscribeEvent
 		public static void registerFillerBlocks(FMLCommonSetupEvent event) {
 			Set<Block> replaceableBlocks = new HashSet<>();
-			replaceableBlocks.add(Blocks.AIR);
-			replaceableBlocks.add(Blocks.AIR);
-			replaceableBlocks.add(Blocks.AIR);
+			replaceableBlocks.add(AnomalyModBlocks.WALLPAPER.get());
+			replaceableBlocks.add(Blocks.BEDROCK);
+			replaceableBlocks.add(Blocks.BEDROCK);
 			event.enqueueWork(() -> {
 				WorldCarver.CAVE.replaceableBlocks = new ImmutableSet.Builder<Block>().addAll(WorldCarver.CAVE.replaceableBlocks)
 						.addAll(replaceableBlocks).build();

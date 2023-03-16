@@ -53,8 +53,6 @@ public class AnomalyModBlocks {
 	public static final RegistryObject<Block> FLUORESCENT_LIGHT_PANEL_FLICKERING = REGISTRY.register("fluorescent_light_panel_flickering",
 			() -> new FluorescentLightPanelFlickeringBlock());
 	public static final RegistryObject<Block> WALLPAPER = REGISTRY.register("wallpaper", () -> new WallpaperBlock());
-	public static final RegistryObject<Block> TILE = REGISTRY.register("tile", () -> new TileBlock());
-	public static final RegistryObject<Block> CARPET = REGISTRY.register("carpet", () -> new CarpetBlock());
 	public static final RegistryObject<Block> PLACER = REGISTRY.register("placer", () -> new PlacerBlock());
 	public static final RegistryObject<Block> INFECTED_WALLPAPER = REGISTRY.register("infected_wallpaper", () -> new InfectedWallpaperBlock());
 	public static final RegistryObject<Block> INFECTED_CARPET = REGISTRY.register("infected_carpet", () -> new InfectedCarpetBlock());
@@ -82,6 +80,8 @@ public class AnomalyModBlocks {
 	public static final RegistryObject<Block> DESKTOP = REGISTRY.register("desktop", () -> new DesktopBlock());
 	public static final RegistryObject<Block> CHAIR = REGISTRY.register("chair", () -> new ChairBlock());
 	public static final RegistryObject<Block> NULL_BLOCK = REGISTRY.register("null_block", () -> new NullBlockBlock());
+	public static final RegistryObject<Block> CARPET = REGISTRY.register("carpet", () -> new CarpetBlock());
+	public static final RegistryObject<Block> TILE = REGISTRY.register("tile", () -> new TileBlock());
 
 	@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 	public static class ClientSideHandler {
