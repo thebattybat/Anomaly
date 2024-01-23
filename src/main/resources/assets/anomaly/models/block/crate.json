@@ -1,12 +1,13 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "anomaly:blocks/birch_planks-2.png",
-    "up": "anomaly:blocks/birch_planks-2.png",
-    "north": "anomaly:blocks/birch_planks-1.png",
-    "east": "anomaly:blocks/birch_planks-1.png",
-    "south": "anomaly:blocks/birch_planks-1.png",
-    "west": "anomaly:blocks/birch_planks-1.png",
-    "particle": "anomaly:blocks/birch_planks-2.png"
-  }
+    "down": "anomaly:block/birch_planks-2.png",
+    "up": "anomaly:block/birch_planks-2.png",
+    "north": "anomaly:block/birch_planks-1.png",
+    "east": "anomaly:block/birch_planks-1.png",
+    "south": "anomaly:block/birch_planks-1.png",
+    "west": "anomaly:block/birch_planks-1.png",
+    "particle": "anomaly:block/birch_planks-2.png"
+  },
+  "render_type": "solid"
 }

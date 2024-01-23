@@ -1,6 +1,5 @@
 {
   "carpetfootsteps": {
-    "category": "player",
     "sounds": [
       {
         "name": "anomaly:step4",
@@ -21,7 +20,6 @@
     ]
   },
   "carpetbreakplace": {
-    "category": "block",
     "sounds": [
       {
         "name": "anomaly:placebreak",
@@ -30,7 +28,6 @@
     ]
   },
   "level0ambient": {
-    "category": "ambient",
     "sounds": [
       {
         "name": "anomaly:levelzero",
@@ -39,7 +36,6 @@
     ]
   },
   "lightpower": {
-    "category": "block",
     "subtitle": "subtitles.lightpower",
     "sounds": [
       {

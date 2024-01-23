@@ -1,7 +1,8 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "anomaly:blocks/new_piskel-1.png_4",
-    "particle": "anomaly:blocks/new_piskel-1.png_4"
-  }
+    "all": "anomaly:block/new_piskel-1.png_4",
+    "particle": "anomaly:block/new_piskel-1.png_4"
+  },
+  "render_type": "solid"
 }

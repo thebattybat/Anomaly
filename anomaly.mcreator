@@ -6,7 +6,15 @@
       "sortid": 1,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "fluorescent_light_panel"
+      "registry_name": "fluorescent_light_panel",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/anomaly/models/block/fluorescent_light_panel.json",
+          "src/main/java/net/mcreator/anomaly/block/FluorescentLightPanelBlock.java",
+          "src/main/resources/assets/anomaly/models/item/fluorescent_light_panel.json",
+          "src/main/resources/assets/anomaly/blockstates/fluorescent_light_panel.json"
+        ]
+      }
     },
     {
       "name": "FluorescentLightPanelFlickering",
@@ -14,7 +22,15 @@
       "sortid": 2,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "fluorescent_light_panel_flickering"
+      "registry_name": "fluorescent_light_panel_flickering",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/anomaly/blockstates/fluorescent_light_panel_flickering.json",
+          "src/main/java/net/mcreator/anomaly/block/FluorescentLightPanelFlickeringBlock.java",
+          "src/main/resources/assets/anomaly/models/block/fluorescent_light_panel_flickering.json",
+          "src/main/resources/assets/anomaly/models/item/fluorescent_light_panel_flickering.json"
+        ]
+      }
     },
     {
       "name": "FluorescentLightPanelUpdateTick",
@@ -24,6 +40,9 @@
       "locked_code": false,
       "registry_name": "fluorescent_light_panel_update_tick",
       "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/anomaly/procedures/FluorescentLightPanelUpdateTickProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "x",
@@ -50,7 +69,15 @@
       "sortid": 6,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "wallpaper"
+      "registry_name": "wallpaper",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/anomaly/blockstates/wallpaper.json",
+          "src/main/resources/assets/anomaly/models/item/wallpaper.json",
+          "src/main/resources/assets/anomaly/models/block/wallpaper.json",
+          "src/main/java/net/mcreator/anomaly/block/WallpaperBlock.java"
+        ]
+      }
     },
     {
       "name": "MazesNAnomalies",
@@ -58,7 +85,10 @@
       "sortid": 9,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "mazes_n_anomalies"
+      "registry_name": "mazes_n_anomalies",
+      "metadata": {
+        "files": []
+      }
     },
     {
       "name": "BackroomsBiome",
@@ -66,7 +96,12 @@
       "sortid": 10,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "level_0_biome"
+      "registry_name": "level_0_biome",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/anomaly/worldgen/biome/level_0_biome.json"
+        ]
+      }
     },
     {
       "name": "Backrooms",
@@ -76,7 +111,12 @@
       "locked_code": false,
       "registry_name": "level_0",
       "metadata": {
-        "ep": false
+        "ep": false,
+        "files": [
+          "src/main/resources/data/anomaly/dimension/level_0.json",
+          "src/main/java/net/mcreator/anomaly/world/dimension/BackroomsDimension.java",
+          "src/main/resources/data/anomaly/dimension_type/level_0.json"
+        ]
       }
     },
     {
@@ -85,7 +125,14 @@
       "sortid": 23,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "mold_creature"
+      "registry_name": "mold_creature",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/anomaly/models/item/mold_creature_spawn_egg.json",
+          "src/main/java/net/mcreator/anomaly/entity/BackroomsEntityEntity.java",
+          "src/main/java/net/mcreator/anomaly/client/renderer/BackroomsEntityRenderer.java"
+        ]
+      }
     },
     {
       "name": "EntityBackrooms",
@@ -93,7 +140,12 @@
       "sortid": 27,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "entity_backrooms"
+      "registry_name": "entity_backrooms",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/minecraft/tags/entity_types/entity_backrooms.json"
+        ]
+      }
     },
     {
       "name": "PlacerUpdateTick",
@@ -103,6 +155,9 @@
       "locked_code": false,
       "registry_name": "placer_update_tick",
       "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/anomaly/procedures/PlacerUpdateTickProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "x",
@@ -129,7 +184,15 @@
       "sortid": 28,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "placer"
+      "registry_name": "placer",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/anomaly/block/PlacerBlock.java",
+          "src/main/resources/assets/anomaly/blockstates/placer.json",
+          "src/main/resources/assets/anomaly/models/block/placer.json",
+          "src/main/resources/assets/anomaly/models/item/placer.json"
+        ]
+      }
     },
     {
       "name": "InfectedWallpaper",
@@ -137,7 +200,15 @@
       "sortid": 29,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "infected_wallpaper"
+      "registry_name": "infected_wallpaper",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/anomaly/block/InfectedWallpaperBlock.java",
+          "src/main/resources/assets/anomaly/blockstates/infected_wallpaper.json",
+          "src/main/resources/assets/anomaly/models/block/infected_wallpaper.json",
+          "src/main/resources/assets/anomaly/models/item/infected_wallpaper.json"
+        ]
+      }
     },
     {
       "name": "InfectedCarpet",
@@ -145,7 +216,15 @@
       "sortid": 30,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "infected_carpet"
+      "registry_name": "infected_carpet",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/anomaly/block/InfectedCarpetBlock.java",
+          "src/main/resources/assets/anomaly/models/block/infected_carpet.json",
+          "src/main/resources/assets/anomaly/blockstates/infected_carpet.json",
+          "src/main/resources/assets/anomaly/models/item/infected_carpet.json"
+        ]
+      }
     },
     {
       "name": "InfectedTile",
@@ -153,7 +232,15 @@
       "sortid": 31,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "infected_tile"
+      "registry_name": "infected_tile",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/anomaly/models/item/infected_tile.json",
+          "src/main/java/net/mcreator/anomaly/block/InfectedTileBlock.java",
+          "src/main/resources/assets/anomaly/blockstates/infected_tile.json",
+          "src/main/resources/assets/anomaly/models/block/infected_tile.json"
+        ]
+      }
     },
     {
       "name": "Mold",
@@ -161,7 +248,15 @@
       "sortid": 32,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "mold"
+      "registry_name": "mold",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/anomaly/models/item/mold.json",
+          "src/main/java/net/mcreator/anomaly/block/MoldBlock.java",
+          "src/main/resources/assets/anomaly/models/block/mold.json",
+          "src/main/resources/assets/anomaly/blockstates/mold.json"
+        ]
+      }
     },
     {
       "name": "Level0ExitToLevel1",
@@ -169,7 +264,15 @@
       "sortid": 33,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "level_0_exit_to_level_1"
+      "registry_name": "level_0_exit_to_level_1",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/anomaly/block/Level0ExitToLevel1Block.java",
+          "src/main/resources/assets/anomaly/models/block/level_0_exit_to_level_1.json",
+          "src/main/resources/assets/anomaly/models/item/level_0_exit_to_level_1.json",
+          "src/main/resources/assets/anomaly/blockstates/level_0_exit_to_level_1.json"
+        ]
+      }
     },
     {
       "name": "ExitSign",
@@ -177,7 +280,15 @@
       "sortid": 34,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "exit_sign"
+      "registry_name": "exit_sign",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/anomaly/models/item/exit_sign.json",
+          "src/main/resources/assets/anomaly/models/block/exit_sign.json",
+          "src/main/resources/assets/anomaly/blockstates/exit_sign.json",
+          "src/main/java/net/mcreator/anomaly/block/ExitSignBlock.java"
+        ]
+      }
     },
     {
       "name": "TubeLight",
@@ -185,7 +296,15 @@
       "sortid": 35,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "tube_light"
+      "registry_name": "tube_light",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/anomaly/block/TubeLightBlock.java",
+          "src/main/resources/assets/anomaly/models/item/tube_light.json",
+          "src/main/resources/assets/anomaly/blockstates/tube_light.json",
+          "src/main/resources/assets/anomaly/models/block/tube_light.json"
+        ]
+      }
     },
     {
       "name": "WhiteBricks",
@@ -193,7 +312,15 @@
       "sortid": 36,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "white_bricks"
+      "registry_name": "white_bricks",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/anomaly/block/WhiteBricksBlock.java",
+          "src/main/resources/assets/anomaly/models/block/white_bricks.json",
+          "src/main/resources/assets/anomaly/blockstates/white_bricks.json",
+          "src/main/resources/assets/anomaly/models/item/white_bricks.json"
+        ]
+      }
     },
     {
       "name": "Cement",
@@ -201,7 +328,15 @@
       "sortid": 37,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "cement"
+      "registry_name": "cement",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/anomaly/models/block/cement.json",
+          "src/main/java/net/mcreator/anomaly/block/CementBlock.java",
+          "src/main/resources/assets/anomaly/models/item/cement.json",
+          "src/main/resources/assets/anomaly/blockstates/cement.json"
+        ]
+      }
     },
     {
       "name": "PaintedCement",
@@ -209,7 +344,15 @@
       "sortid": 38,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "painted_cement"
+      "registry_name": "painted_cement",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/anomaly/models/block/painted_cement.json",
+          "src/main/java/net/mcreator/anomaly/block/PaintedCementBlock.java",
+          "src/main/resources/assets/anomaly/models/item/painted_cement.json",
+          "src/main/resources/assets/anomaly/blockstates/painted_cement.json"
+        ]
+      }
     },
     {
       "name": "FSign",
@@ -217,7 +360,15 @@
       "sortid": 39,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "f_sign"
+      "registry_name": "f_sign",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/anomaly/blockstates/f_sign.json",
+          "src/main/resources/assets/anomaly/models/item/f_sign.json",
+          "src/main/java/net/mcreator/anomaly/block/FSignBlock.java",
+          "src/main/resources/assets/anomaly/models/block/f_sign.json"
+        ]
+      }
     },
     {
       "name": "ASign",
@@ -225,7 +376,15 @@
       "sortid": 40,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "a_sign"
+      "registry_name": "a_sign",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/anomaly/blockstates/a_sign.json",
+          "src/main/resources/assets/anomaly/models/block/a_sign.json",
+          "src/main/java/net/mcreator/anomaly/block/ASignBlock.java",
+          "src/main/resources/assets/anomaly/models/item/a_sign.json"
+        ]
+      }
     },
     {
       "name": "ESign",
@@ -233,7 +392,15 @@
       "sortid": 41,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "e_sign"
+      "registry_name": "e_sign",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/anomaly/models/block/e_sign.json",
+          "src/main/resources/assets/anomaly/models/item/e_sign.json",
+          "src/main/java/net/mcreator/anomaly/block/ESignBlock.java",
+          "src/main/resources/assets/anomaly/blockstates/e_sign.json"
+        ]
+      }
     },
     {
       "name": "AlmondWater",
@@ -241,7 +408,13 @@
       "sortid": 42,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "almond_water"
+      "registry_name": "almond_water",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/anomaly/item/AlmondWaterItem.java",
+          "src/main/resources/assets/anomaly/models/item/almond_water.json"
+        ]
+      }
     },
     {
       "name": "EmptyAlmondWater",
@@ -249,7 +422,13 @@
       "sortid": 43,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "empty_almond_water"
+      "registry_name": "empty_almond_water",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/anomaly/models/item/empty_almond_water.json",
+          "src/main/java/net/mcreator/anomaly/item/EmptyAlmondWaterItem.java"
+        ]
+      }
     },
     {
       "name": "AnomalyItems",
@@ -257,7 +436,10 @@
       "sortid": 44,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "anomaly_items"
+      "registry_name": "anomaly_items",
+      "metadata": {
+        "files": []
+      }
     },
     {
       "name": "Crate",
@@ -265,7 +447,15 @@
       "sortid": 45,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "crate"
+      "registry_name": "crate",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/anomaly/models/item/crate.json",
+          "src/main/java/net/mcreator/anomaly/block/CrateBlock.java",
+          "src/main/resources/assets/anomaly/blockstates/crate.json",
+          "src/main/resources/assets/anomaly/models/block/crate.json"
+        ]
+      }
     },
     {
       "name": "AlmondWaterPlayerFinishesUsingItem",
@@ -275,6 +465,9 @@
       "locked_code": false,
       "registry_name": "almond_water_player_finishes_using_item",
       "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/anomaly/procedures/AlmondWaterPlayerFinishesUsingItemProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "entity",
@@ -289,7 +482,22 @@
       "sortid": 47,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "metal_door"
+      "registry_name": "metal_door",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/anomaly/models/block/metal_door_top_left.json",
+          "src/main/resources/assets/anomaly/models/block/metal_door_top_left_open.json",
+          "src/main/java/net/mcreator/anomaly/block/MetalDoorBlock.java",
+          "src/main/resources/assets/anomaly/models/item/metal_door.json",
+          "src/main/resources/assets/anomaly/models/block/metal_door_bottom_left.json",
+          "src/main/resources/assets/anomaly/models/block/metal_door_top_right.json",
+          "src/main/resources/assets/anomaly/blockstates/metal_door.json",
+          "src/main/resources/assets/anomaly/models/block/metal_door_top_right_open.json",
+          "src/main/resources/assets/anomaly/models/block/metal_door_bottom_right.json",
+          "src/main/resources/assets/anomaly/models/block/metal_door_bottom_right_open.json",
+          "src/main/resources/assets/anomaly/models/block/metal_door_bottom_left_open.json"
+        ]
+      }
     },
     {
       "name": "WhiteCement",
@@ -297,7 +505,15 @@
       "sortid": 48,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "white_cement"
+      "registry_name": "white_cement",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/anomaly/models/block/white_cement.json",
+          "src/main/java/net/mcreator/anomaly/block/WhiteCementBlock.java",
+          "src/main/resources/assets/anomaly/models/item/white_cement.json",
+          "src/main/resources/assets/anomaly/blockstates/white_cement.json"
+        ]
+      }
     },
     {
       "name": "Level1Placer",
@@ -305,7 +521,15 @@
       "sortid": 49,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "level_1_placer"
+      "registry_name": "level_1_placer",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/anomaly/blockstates/level_1_placer.json",
+          "src/main/resources/assets/anomaly/models/item/level_1_placer.json",
+          "src/main/resources/assets/anomaly/models/block/level_1_placer.json",
+          "src/main/java/net/mcreator/anomaly/block/Level1PlacerBlock.java"
+        ]
+      }
     },
     {
       "name": "Level1",
@@ -315,7 +539,12 @@
       "locked_code": false,
       "registry_name": "level_1",
       "metadata": {
-        "ep": false
+        "ep": false,
+        "files": [
+          "src/main/resources/data/anomaly/dimension_type/level_1.json",
+          "src/main/java/net/mcreator/anomaly/world/dimension/Level1Dimension.java",
+          "src/main/resources/data/anomaly/dimension/level_1.json"
+        ]
       }
     },
     {
@@ -324,7 +553,12 @@
       "sortid": 51,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "level_1_biome"
+      "registry_name": "level_1_biome",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/anomaly/worldgen/biome/level_1_biome.json"
+        ]
+      }
     },
     {
       "name": "Init",
@@ -334,6 +568,9 @@
       "locked_code": false,
       "registry_name": "init",
       "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/anomaly/procedures/InitProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "world",
@@ -348,7 +585,12 @@
       "sortid": 53,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "level"
+      "registry_name": "level",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/anomaly/command/LevelCommand.java"
+        ]
+      }
     },
     {
       "name": "LevelCommandExecuted",
@@ -358,6 +600,9 @@
       "locked_code": false,
       "registry_name": "level_command_executed",
       "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/anomaly/procedures/LevelCommandExecutedProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "entity",
@@ -376,7 +621,12 @@
       "sortid": 54,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "backrooms_advancement"
+      "registry_name": "backrooms_advancement",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/anomaly/advancements/backrooms_advancement.json"
+        ]
+      }
     },
     {
       "name": "Level0Advancement",
@@ -384,7 +634,12 @@
       "sortid": 55,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "level_0_advancement"
+      "registry_name": "level_0_advancement",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/anomaly/advancements/level_0_advancement.json"
+        ]
+      }
     },
     {
       "name": "Level1Advancement",
@@ -392,7 +647,12 @@
       "sortid": 56,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "level_1_advancement"
+      "registry_name": "level_1_advancement",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/anomaly/advancements/level_1_advancement.json"
+        ]
+      }
     },
     {
       "name": "Level1PlacerUpdateTick",
@@ -402,6 +662,9 @@
       "locked_code": false,
       "registry_name": "level_1_placer_update_tick",
       "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/anomaly/procedures/Level1PlacerUpdateTickProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "x",
@@ -428,7 +691,15 @@
       "sortid": 58,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "parking_placer"
+      "registry_name": "parking_placer",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/anomaly/models/block/parking_placer.json",
+          "src/main/resources/assets/anomaly/models/item/parking_placer.json",
+          "src/main/resources/assets/anomaly/blockstates/parking_placer.json",
+          "src/main/java/net/mcreator/anomaly/block/ParkingPlacerBlock.java"
+        ]
+      }
     },
     {
       "name": "ImmediateParkingPlacer",
@@ -436,7 +707,15 @@
       "sortid": 59,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "immediate_parking_placer"
+      "registry_name": "immediate_parking_placer",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/anomaly/block/ImmediateParkingPlacerBlock.java",
+          "src/main/resources/assets/anomaly/models/item/immediate_parking_placer.json",
+          "src/main/resources/assets/anomaly/models/block/immediate_parking_placer.json",
+          "src/main/resources/assets/anomaly/blockstates/immediate_parking_placer.json"
+        ]
+      }
     },
     {
       "name": "ImmediateParkingPlacerBlockAdded",
@@ -446,6 +725,9 @@
       "locked_code": false,
       "registry_name": "immediate_parking_placer_block_added",
       "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/anomaly/procedures/ImmediateParkingPlacerBlockAddedProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "x",
@@ -474,6 +756,9 @@
       "locked_code": false,
       "registry_name": "parking_placer_when_block_added",
       "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/anomaly/procedures/ParkingPlacerWhenBlockAddedProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "x",
@@ -500,7 +785,17 @@
       "sortid": 62,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "carpet_stairs"
+      "registry_name": "carpet_stairs",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/anomaly/models/block/carpet_stairs_inner.json",
+          "src/main/java/net/mcreator/anomaly/block/CarpetStairsBlock.java",
+          "src/main/resources/assets/anomaly/models/block/carpet_stairs.json",
+          "src/main/resources/assets/anomaly/blockstates/carpet_stairs.json",
+          "src/main/resources/assets/anomaly/models/block/carpet_stairs_outer.json",
+          "src/main/resources/assets/anomaly/models/item/carpet_stairs.json"
+        ]
+      }
     },
     {
       "name": "Drawer",
@@ -508,7 +803,16 @@
       "sortid": 63,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "drawer"
+      "registry_name": "drawer",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/anomaly/models/block/drawer.json",
+          "src/main/java/net/mcreator/anomaly/block/entity/DrawerBlockEntity.java",
+          "src/main/java/net/mcreator/anomaly/block/DrawerBlock.java",
+          "src/main/resources/assets/anomaly/models/item/drawer.json",
+          "src/main/resources/assets/anomaly/blockstates/drawer.json"
+        ]
+      }
     },
     {
       "name": "DrawerGui",
@@ -516,7 +820,13 @@
       "sortid": 64,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "drawer_gui"
+      "registry_name": "drawer_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/anomaly/client/gui/DrawerGuiScreen.java",
+          "src/main/java/net/mcreator/anomaly/world/inventory/DrawerGuiMenu.java"
+        ]
+      }
     },
     {
       "name": "Desktop",
@@ -524,7 +834,17 @@
       "sortid": 65,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "desktop"
+      "registry_name": "desktop",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/anomaly/models/block/desktop_top.json",
+          "src/main/resources/assets/anomaly/models/block/desktop.json",
+          "src/main/resources/assets/anomaly/blockstates/desktop.json",
+          "src/main/resources/assets/anomaly/models/item/desktop.json",
+          "src/main/java/net/mcreator/anomaly/block/DesktopBlock.java",
+          "src/main/resources/assets/anomaly/models/block/desktop_full.json"
+        ]
+      }
     },
     {
       "name": "Chair",
@@ -532,7 +852,15 @@
       "sortid": 66,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "chair"
+      "registry_name": "chair",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/anomaly/models/item/chair.json",
+          "src/main/resources/assets/anomaly/blockstates/chair.json",
+          "src/main/java/net/mcreator/anomaly/block/ChairBlock.java",
+          "src/main/resources/assets/anomaly/models/block/chair.json"
+        ]
+      }
     },
     {
       "name": "Smiler",
@@ -540,7 +868,14 @@
       "sortid": 67,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "smiler"
+      "registry_name": "smiler",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/anomaly/entity/SmilerEntity.java",
+          "src/main/resources/assets/anomaly/models/item/smiler_spawn_egg.json",
+          "src/main/java/net/mcreator/anomaly/client/renderer/SmilerRenderer.java"
+        ]
+      }
     },
     {
       "name": "NullBlock",
@@ -548,7 +883,15 @@
       "sortid": 68,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "null_block"
+      "registry_name": "null_block",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/anomaly/blockstates/null_block.json",
+          "src/main/java/net/mcreator/anomaly/block/NullBlockBlock.java",
+          "src/main/resources/assets/anomaly/models/item/null_block.json",
+          "src/main/resources/assets/anomaly/models/block/null_block.json"
+        ]
+      }
     },
     {
       "name": "Teleport2level1",
@@ -558,6 +901,9 @@
       "locked_code": false,
       "registry_name": "teleport_2level_1",
       "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/anomaly/procedures/Teleport2level1Procedure.java"
+        ],
         "dependencies": [
           {
             "name": "entity",
@@ -578,6 +924,9 @@
       "locked_code": false,
       "registry_name": "level_1tp",
       "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/anomaly/procedures/Level1tpProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "entity",
@@ -594,7 +943,8 @@
       "locked_code": false,
       "registry_name": "flickerSpeed",
       "metadata": {
-        "type": "number"
+        "type": "number",
+        "files": []
       }
     },
     {
@@ -605,6 +955,9 @@
       "locked_code": false,
       "registry_name": "power_tick",
       "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/anomaly/procedures/PowerTickProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "x",
@@ -631,7 +984,15 @@
       "sortid": 73,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "carpet"
+      "registry_name": "carpet",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/anomaly/blockstates/carpet.json",
+          "src/main/resources/assets/anomaly/models/block/carpet.json",
+          "src/main/resources/assets/anomaly/models/item/carpet.json",
+          "src/main/java/net/mcreator/anomaly/block/CarpetBlock.java"
+        ]
+      }
     },
     {
       "name": "Tile",
@@ -639,7 +1000,15 @@
       "sortid": 74,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "tile"
+      "registry_name": "tile",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/anomaly/models/item/tile.json",
+          "src/main/resources/assets/anomaly/blockstates/tile.json",
+          "src/main/resources/assets/anomaly/models/block/tile.json",
+          "src/main/java/net/mcreator/anomaly/block/TileBlock.java"
+        ]
+      }
     },
     {
       "name": "TurnOnTick",
@@ -649,6 +1018,9 @@
       "locked_code": false,
       "registry_name": "turn_on_tick",
       "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/anomaly/procedures/TurnOnTickProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "x",
@@ -737,10 +1109,12 @@
     "en_us": {
       "subtitles.lighthum": "Lights buzzing",
       "block.mazes_and_anomalies.level_0_exit_to_level_1": "Wallpaper",
+      "item_group.anomaly.mazes_n_anomalies": "Anomaly - Blocks",
+      "item_group.anomaly.anomaly_items": "Anomaly - Items",
       "subtitles.buzzing": "Light buzzes",
       "subtitles.level0ambient": "",
-      "gamerule.flickerSpeed.description": "Sets the speed of flickering",
       "block.mazes_and_anomalies.fluorescent_light_panel_flickering": "Fluorescent Light Panel",
+      "gamerule.flickerSpeed.description": "Sets the speed of flickering",
       "block.mazes_and_anomalies.infected_wallpaper": "Infected Wallpaper",
       "block.anomaly.infected_wallpaper": "Infected Wallpaper",
       "block.mazes_and_anomalies.f_sign": "Painted Cement",
@@ -754,6 +1128,7 @@
       "item.mazes_and_anomalies.level_0": "Backrooms Portal Igniter",
       "block.anomaly.infected_carpet": "Infected Carpet",
       "entity.mazes_and_anomalies.backrooms_entity": "Mold Creature",
+      "gui.anomaly.drawer_gui.label_drawer": "Drawer",
       "block.anomaly.f_sign": "Painted Cement",
       "item.mazes_and_anomalies.backrooms_entity_spawn_egg": "Mold Creature Spawn Egg",
       "block.anomaly.desktop": "Desktop",
@@ -776,7 +1151,6 @@
       "advancements.level_0_advancement.descr": "Enter Level 0 by noclipping out of reality",
       "block.anomaly.null_block": "Null",
       "block.mazes_and_anomalies.tile": "Ceiling Tile",
-      "item.anomaly.level_0": "Backrooms Portal Igniter",
       "block.anomaly.painted_cement": "Painted Cement",
       "subtitles.carpetfootsteps": "",
       "block.anomaly.metal_door": "Metal Door",
@@ -794,7 +1168,6 @@
       "entity.anomaly.mold_creature": "Mold Creature",
       "block.mazes_and_anomalies.infected_tile": "Infected Tile",
       "block.mazes_and_anomalies.white_bricks": "White Bricks",
-      "item.anomaly.level_1": "Backrooms Portal Igniter",
       "block.mazes_and_anomalies.infected_carpet": "Infected Carpet",
       "block.anomaly.level_1_placer": "Level 1 Placer",
       "block.anomaly.tube_light": "Tube Light",
@@ -836,10 +1209,10 @@
     "dependencies": [],
     "dependants": [],
     "mcreatorDependencies": [],
-    "currentGenerator": "forge-1.18.2",
+    "currentGenerator": "forge-1.20.1",
     "credits": "This mod was made using MCreator: https://mcreator.net/about",
     "modElementsPackage": "net.mcreator.anomaly",
     "lockBaseModFiles": false
   },
-  "mcreatorVersion": 202200348217
+  "mcreatorVersion": 202300452316
 }

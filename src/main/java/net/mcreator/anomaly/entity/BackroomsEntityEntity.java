@@ -24,10 +24,12 @@ import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.AreaEffectCloud;
+import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.core.BlockPos;
 
@@ -40,12 +42,13 @@ public class BackroomsEntityEntity extends Monster {
 
 	public BackroomsEntityEntity(EntityType<BackroomsEntityEntity> type, Level world) {
 		super(type, world);
+		setMaxUpStep(0.6f);
 		xpReward = 0;
 		setNoAi(false);
 	}
 
 	@Override
-	public Packet<?> getAddEntityPacket() {
+	public Packet<ClientGamePacketListener> getAddEntityPacket() {
 		return NetworkHooks.getEntitySpawningPacket(this);
 	}
 
@@ -57,7 +60,7 @@ public class BackroomsEntityEntity extends Monster {
 		this.goalSelector.addGoal(3, new MeleeAttackGoal(this, 1.2, false) {
 			@Override
 			protected double getAttackReachSqr(LivingEntity entity) {
-				return (double) (4.0 + entity.getBbWidth() * entity.getBbWidth());
+				return this.mob.getBbWidth() * this.mob.getBbWidth() + entity.getBbWidth();
 			}
 		});
 		this.goalSelector.addGoal(4, new RandomStrollGoal(this, 1));
@@ -92,24 +95,26 @@ public class BackroomsEntityEntity extends Monster {
 	}
 
 	@Override
-	public boolean hurt(DamageSource source, float amount) {
-		if (source.getDirectEntity() instanceof AbstractArrow)
+	public boolean hurt(DamageSource damagesource, float amount) {
+		if (damagesource.is(DamageTypes.IN_FIRE))
 			return false;
-		if (source.getDirectEntity() instanceof ThrownPotion || source.getDirectEntity() instanceof AreaEffectCloud)
+		if (damagesource.getDirectEntity() instanceof AbstractArrow)
 			return false;
-		if (source == DamageSource.FALL)
+		if (damagesource.getDirectEntity() instanceof ThrownPotion || damagesource.getDirectEntity() instanceof AreaEffectCloud)
 			return false;
-		if (source == DamageSource.CACTUS)
+		if (damagesource.is(DamageTypes.FALL))
 			return false;
-		if (source == DamageSource.DROWN)
+		if (damagesource.is(DamageTypes.CACTUS))
 			return false;
-		if (source.getMsgId().equals("trident"))
+		if (damagesource.is(DamageTypes.DROWN))
 			return false;
-		if (source == DamageSource.ANVIL)
+		if (damagesource.is(DamageTypes.TRIDENT))
 			return false;
-		if (source == DamageSource.DRAGON_BREATH)
+		if (damagesource.is(DamageTypes.FALLING_ANVIL))
 			return false;
-		return super.hurt(source, amount);
+		if (damagesource.is(DamageTypes.DRAGON_BREATH))
+			return false;
+		return super.hurt(damagesource, amount);
 	}
 
 	public static void init() {

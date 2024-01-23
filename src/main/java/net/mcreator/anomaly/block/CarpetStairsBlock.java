@@ -1,17 +1,19 @@
 
 package net.mcreator.anomaly.block;
 
+import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.common.util.ForgeSoundType;
 
-import net.minecraft.world.level.storage.loot.LootContext;
-import net.minecraft.world.level.material.Material;
+import net.minecraft.world.level.storage.loot.LootParams;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.chat.Component;
 
 import java.util.List;
 import java.util.Collections;
@@ -19,12 +21,10 @@ import java.util.Collections;
 public class CarpetStairsBlock extends StairBlock {
 	public CarpetStairsBlock() {
 		super(() -> Blocks.AIR.defaultBlockState(),
-				BlockBehaviour.Properties.of(Material.WOOL)
-						.sound(new ForgeSoundType(1.0f, 1.0f, () -> new SoundEvent(new ResourceLocation("anomaly:carpetbreakplace")),
-								() -> new SoundEvent(new ResourceLocation("anomaly:carpetfootsteps")),
-								() -> new SoundEvent(new ResourceLocation("anomaly:carpetbreakplace")),
-								() -> new SoundEvent(new ResourceLocation("anomaly:carpetfootsteps")),
-								() -> new SoundEvent(new ResourceLocation("anomaly:carpetbreakplace"))))
+				BlockBehaviour.Properties.of().ignitedByLava()
+						.sound(new ForgeSoundType(1.0f, 1.0f, () -> ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("anomaly:carpetbreakplace")), () -> ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("anomaly:carpetfootsteps")),
+								() -> ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("anomaly:carpetbreakplace")), () -> ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("anomaly:carpetfootsteps")),
+								() -> ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("anomaly:carpetbreakplace"))))
 						.strength(-1, 3600000).dynamicShape());
 	}
 
@@ -34,12 +34,17 @@ public class CarpetStairsBlock extends StairBlock {
 	}
 
 	@Override
-	public boolean isRandomlyTicking(BlockState p_56947_) {
+	public boolean isRandomlyTicking(BlockState state) {
 		return false;
 	}
 
 	@Override
-	public List<ItemStack> getDrops(BlockState state, LootContext.Builder builder) {
+	public void appendHoverText(ItemStack itemstack, BlockGetter world, List<Component> list, TooltipFlag flag) {
+		super.appendHoverText(itemstack, world, list, flag);
+	}
+
+	@Override
+	public List<ItemStack> getDrops(BlockState state, LootParams.Builder builder) {
 		List<ItemStack> dropsOriginal = super.getDrops(state, builder);
 		if (!dropsOriginal.isEmpty())
 			return dropsOriginal;

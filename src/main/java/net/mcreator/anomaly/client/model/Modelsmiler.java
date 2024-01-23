@@ -33,18 +33,14 @@ public class Modelsmiler<T extends Entity> extends EntityModel<T> {
 	public static LayerDefinition createBodyLayer() {
 		MeshDefinition meshdefinition = new MeshDefinition();
 		PartDefinition partdefinition = meshdefinition.getRoot();
-		PartDefinition lowerjaw = partdefinition.addOrReplaceChild("lowerjaw",
-				CubeListBuilder.create().texOffs(0, 29).addBox(-9.0F, -0.5F, -18.0F, 19.0F, 7.0F, 18.0F, new CubeDeformation(0.0F)),
+		PartDefinition lowerjaw = partdefinition.addOrReplaceChild("lowerjaw", CubeListBuilder.create().texOffs(0, 29).addBox(-9.0F, -0.5F, -18.0F, 19.0F, 7.0F, 18.0F, new CubeDeformation(0.0F)),
 				PartPose.offsetAndRotation(0.0F, 0.5F, 9.0F, 0.0436F, 0.0F, 0.0F));
-		PartDefinition highjaw = partdefinition.addOrReplaceChild("highjaw",
-				CubeListBuilder.create().texOffs(0, 0).addBox(-9.0F, -11.5F, -18.0F, 19.0F, 11.0F, 18.0F, new CubeDeformation(0.0F)),
-				PartPose.offset(0.0F, 0.5F, 9.0F));
+		PartDefinition highjaw = partdefinition.addOrReplaceChild("highjaw", CubeListBuilder.create().texOffs(0, 0).addBox(-9.0F, -11.5F, -18.0F, 19.0F, 11.0F, 18.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 0.5F, 9.0F));
 		return LayerDefinition.create(meshdefinition, 128, 128);
 	}
 
 	@Override
-	public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, float red, float green,
-			float blue, float alpha) {
+	public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha) {
 		lowerjaw.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
 		highjaw.render(poseStack, vertexConsumer, packedLight, packedOverlay, red, green, blue, alpha);
 	}

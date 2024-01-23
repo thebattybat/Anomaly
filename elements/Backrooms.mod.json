@@ -1,5 +1,5 @@
 {
-  "_fv": 34,
+  "_fv": 57,
   "_type": "dimension",
   "definition": {
     "biomesInDimension": [
@@ -31,7 +31,11 @@
     "portalSound": {
       "value": "block.portal.ambient"
     },
+    "enableIgniter": true,
     "igniterName": "Backrooms Portal Igniter",
+    "specialInformation": {
+      "fixedValue": []
+    },
     "igniterTab": {
       "value": "TOOLS"
     },

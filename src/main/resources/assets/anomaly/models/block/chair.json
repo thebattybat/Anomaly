@@ -1,8 +1,9 @@
 {
   "parent": "anomaly:custom/chair",
   "textures": {
-    "all": "anomaly:blocks/texture_15",
-    "particle": "anomaly:blocks/texture_15",
-    "0": "anomaly:blocks/texture_15"
-  }
+    "all": "anomaly:block/texture_15",
+    "particle": "anomaly:block/texture_15",
+    "0": "anomaly:block/texture_15"
+  },
+  "render_type": "solid"
 }

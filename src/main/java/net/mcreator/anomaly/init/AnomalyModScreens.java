@@ -1,6 +1,6 @@
 
 /*
- *    MCreator note: This file will be REGENERATED on each build.
+ *	MCreator note: This file will be REGENERATED on each build.
  */
 package net.mcreator.anomaly.init;
 
@@ -18,7 +18,7 @@ public class AnomalyModScreens {
 	@SubscribeEvent
 	public static void clientLoad(FMLClientSetupEvent event) {
 		event.enqueueWork(() -> {
-			MenuScreens.register(AnomalyModMenus.DRAWER_GUI, DrawerGuiScreen::new);
+			MenuScreens.register(AnomalyModMenus.DRAWER_GUI.get(), DrawerGuiScreen::new);
 		});
 	}
 }

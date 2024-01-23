@@ -1,6 +1,6 @@
 {
   "pack": {
-    "description": "anomaly mod resources",
-    "pack_format": 9
+    "pack_format": 15,
+    "description": "Endless rooms to explore"
   }
 }

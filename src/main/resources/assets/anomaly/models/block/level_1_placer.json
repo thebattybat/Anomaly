@@ -1,12 +1,13 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "anomaly:blocks/placer",
-    "up": "anomaly:blocks/placer",
-    "north": "anomaly:blocks/placer",
-    "east": "anomaly:blocks/placer",
-    "south": "anomaly:blocks/placer",
-    "west": "anomaly:blocks/placer",
-    "particle": "anomaly:blocks/placer"
-  }
+    "down": "anomaly:block/placer",
+    "up": "anomaly:block/placer",
+    "north": "anomaly:block/placer",
+    "east": "anomaly:block/placer",
+    "south": "anomaly:block/placer",
+    "west": "anomaly:block/placer",
+    "particle": "anomaly:block/placer"
+  },
+  "render_type": "solid"
 }

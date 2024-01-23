@@ -4,12 +4,13 @@ package net.mcreator.anomaly.world.inventory;
 import net.minecraftforge.items.SlotItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
 import net.minecraftforge.items.IItemHandler;
-import net.minecraftforge.items.CapabilityItemHandler;
+import net.minecraftforge.common.capabilities.ForgeCapabilities;
 
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.inventory.Slot;
+import net.minecraft.world.inventory.ContainerLevelAccess;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
@@ -29,14 +30,18 @@ public class DrawerGuiMenu extends AbstractContainerMenu implements Supplier<Map
 	public final Level world;
 	public final Player entity;
 	public int x, y, z;
+	private ContainerLevelAccess access = ContainerLevelAccess.NULL;
 	private IItemHandler internal;
 	private final Map<Integer, Slot> customSlots = new HashMap<>();
 	private boolean bound = false;
+	private Supplier<Boolean> boundItemMatcher = null;
+	private Entity boundEntity = null;
+	private BlockEntity boundBlockEntity = null;
 
 	public DrawerGuiMenu(int id, Inventory inv, FriendlyByteBuf extraData) {
-		super(AnomalyModMenus.DRAWER_GUI, id);
+		super(AnomalyModMenus.DRAWER_GUI.get(), id);
 		this.entity = inv.player;
-		this.world = inv.player.level;
+		this.world = inv.player.level();
 		this.internal = new ItemStackHandler(18);
 		BlockPos pos = null;
 		if (extraData != null) {
@@ -44,72 +49,87 @@ public class DrawerGuiMenu extends AbstractContainerMenu implements Supplier<Map
 			this.x = pos.getX();
 			this.y = pos.getY();
 			this.z = pos.getZ();
+			access = ContainerLevelAccess.create(world, pos);
 		}
 		if (pos != null) {
 			if (extraData.readableBytes() == 1) { // bound to item
 				byte hand = extraData.readByte();
-				ItemStack itemstack;
-				if (hand == 0)
-					itemstack = this.entity.getMainHandItem();
-				else
-					itemstack = this.entity.getOffhandItem();
-				itemstack.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+				ItemStack itemstack = hand == 0 ? this.entity.getMainHandItem() : this.entity.getOffhandItem();
+				this.boundItemMatcher = () -> itemstack == (hand == 0 ? this.entity.getMainHandItem() : this.entity.getOffhandItem());
+				itemstack.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 					this.internal = capability;
 					this.bound = true;
 				});
-			} else if (extraData.readableBytes() > 1) {
+			} else if (extraData.readableBytes() > 1) { // bound to entity
 				extraData.readByte(); // drop padding
-				Entity entity = world.getEntity(extraData.readVarInt());
-				if (entity != null)
-					entity.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+				boundEntity = world.getEntity(extraData.readVarInt());
+				if (boundEntity != null)
+					boundEntity.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 						this.internal = capability;
 						this.bound = true;
 					});
 			} else { // might be bound to block
-				BlockEntity ent = inv.player != null ? inv.player.level.getBlockEntity(pos) : null;
-				if (ent != null) {
-					ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+				boundBlockEntity = this.world.getBlockEntity(pos);
+				if (boundBlockEntity != null)
+					boundBlockEntity.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 						this.internal = capability;
 						this.bound = true;
 					});
-				}
 			}
 		}
 		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 7, 35) {
+			private final int slot = 0;
 		}));
 		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 25, 35) {
+			private final int slot = 1;
 		}));
 		this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 43, 35) {
+			private final int slot = 2;
 		}));
 		this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 61, 35) {
+			private final int slot = 3;
 		}));
 		this.customSlots.put(4, this.addSlot(new SlotItemHandler(internal, 4, 79, 35) {
+			private final int slot = 4;
 		}));
 		this.customSlots.put(5, this.addSlot(new SlotItemHandler(internal, 5, 97, 35) {
+			private final int slot = 5;
 		}));
 		this.customSlots.put(6, this.addSlot(new SlotItemHandler(internal, 6, 115, 35) {
+			private final int slot = 6;
 		}));
 		this.customSlots.put(7, this.addSlot(new SlotItemHandler(internal, 7, 133, 35) {
+			private final int slot = 7;
 		}));
 		this.customSlots.put(8, this.addSlot(new SlotItemHandler(internal, 8, 151, 35) {
+			private final int slot = 8;
 		}));
 		this.customSlots.put(9, this.addSlot(new SlotItemHandler(internal, 9, 7, 53) {
+			private final int slot = 9;
 		}));
 		this.customSlots.put(10, this.addSlot(new SlotItemHandler(internal, 10, 25, 53) {
+			private final int slot = 10;
 		}));
 		this.customSlots.put(11, this.addSlot(new SlotItemHandler(internal, 11, 43, 53) {
+			private final int slot = 11;
 		}));
 		this.customSlots.put(12, this.addSlot(new SlotItemHandler(internal, 12, 61, 53) {
+			private final int slot = 12;
 		}));
 		this.customSlots.put(13, this.addSlot(new SlotItemHandler(internal, 13, 79, 53) {
+			private final int slot = 13;
 		}));
 		this.customSlots.put(14, this.addSlot(new SlotItemHandler(internal, 14, 97, 53) {
+			private final int slot = 14;
 		}));
 		this.customSlots.put(15, this.addSlot(new SlotItemHandler(internal, 15, 115, 53) {
+			private final int slot = 15;
 		}));
 		this.customSlots.put(16, this.addSlot(new SlotItemHandler(internal, 16, 133, 53) {
+			private final int slot = 16;
 		}));
 		this.customSlots.put(17, this.addSlot(new SlotItemHandler(internal, 17, 151, 53) {
+			private final int slot = 17;
 		}));
 		for (int si = 0; si < 3; ++si)
 			for (int sj = 0; sj < 9; ++sj)
@@ -120,6 +140,14 @@ public class DrawerGuiMenu extends AbstractContainerMenu implements Supplier<Map
 
 	@Override
 	public boolean stillValid(Player player) {
+		if (this.bound) {
+			if (this.boundItemMatcher != null)
+				return this.boundItemMatcher.get();
+			else if (this.boundBlockEntity != null)
+				return AbstractContainerMenu.stillValid(this.access, player, this.boundBlockEntity.getBlockState().getBlock());
+			else if (this.boundEntity != null)
+				return this.boundEntity.isAlive();
+		}
 		return true;
 	}
 
@@ -131,30 +159,25 @@ public class DrawerGuiMenu extends AbstractContainerMenu implements Supplier<Map
 			ItemStack itemstack1 = slot.getItem();
 			itemstack = itemstack1.copy();
 			if (index < 18) {
-				if (!this.moveItemStackTo(itemstack1, 18, this.slots.size(), true)) {
+				if (!this.moveItemStackTo(itemstack1, 18, this.slots.size(), true))
 					return ItemStack.EMPTY;
-				}
 				slot.onQuickCraft(itemstack1, itemstack);
 			} else if (!this.moveItemStackTo(itemstack1, 0, 18, false)) {
 				if (index < 18 + 27) {
-					if (!this.moveItemStackTo(itemstack1, 18 + 27, this.slots.size(), true)) {
+					if (!this.moveItemStackTo(itemstack1, 18 + 27, this.slots.size(), true))
 						return ItemStack.EMPTY;
-					}
 				} else {
-					if (!this.moveItemStackTo(itemstack1, 18, 18 + 27, false)) {
+					if (!this.moveItemStackTo(itemstack1, 18, 18 + 27, false))
 						return ItemStack.EMPTY;
-					}
 				}
 				return ItemStack.EMPTY;
 			}
-			if (itemstack1.getCount() == 0) {
+			if (itemstack1.getCount() == 0)
 				slot.set(ItemStack.EMPTY);
-			} else {
+			else
 				slot.setChanged();
-			}
-			if (itemstack1.getCount() == itemstack.getCount()) {
+			if (itemstack1.getCount() == itemstack.getCount())
 				return ItemStack.EMPTY;
-			}
 			slot.onTake(playerIn, itemstack1);
 		}
 		return itemstack;
@@ -218,9 +241,9 @@ public class DrawerGuiMenu extends AbstractContainerMenu implements Supplier<Map
 				ItemStack itemstack1 = slot1.getItem();
 				if (itemstack1.isEmpty() && slot1.mayPlace(p_38904_)) {
 					if (p_38904_.getCount() > slot1.getMaxStackSize()) {
-						slot1.set(p_38904_.split(slot1.getMaxStackSize()));
+						slot1.setByPlayer(p_38904_.split(slot1.getMaxStackSize()));
 					} else {
-						slot1.set(p_38904_.split(p_38904_.getCount()));
+						slot1.setByPlayer(p_38904_.split(p_38904_.getCount()));
 					}
 					slot1.setChanged();
 					flag = true;

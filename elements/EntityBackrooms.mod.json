@@ -1,5 +1,5 @@
 {
-  "_fv": 34,
+  "_fv": 57,
   "_type": "tag",
   "definition": {
     "type": "Entities",
@@ -11,6 +11,8 @@
         "value": "CUSTOM:BackroomsEntity"
       }
     ],
+    "biomes": [],
+    "damageTypes": [],
     "name": "entity_backrooms",
     "namespace": "minecraft"
   }

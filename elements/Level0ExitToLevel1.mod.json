@@ -1,5 +1,5 @@
 {
-  "_fv": 34,
+  "_fv": 57,
   "_type": "block",
   "definition": {
     "texture": "imageedit_9_3979800100_16x16-1.png_2-2.png",
@@ -34,7 +34,9 @@
       }
     ],
     "name": "Wallpaper",
-    "specialInfo": [],
+    "specialInformation": {
+      "fixedValue": []
+    },
     "hardness": 2.0,
     "resistance": 10.0,
     "hasGravity": false,
@@ -99,13 +101,7 @@
     "luminance": 0,
     "unbreakable": true,
     "breakHarvestLevel": 1,
-    "spawnParticles": false,
-    "particleToSpawn": {
-      "value": "EXPLOSION_NORMAL"
-    },
-    "particleSpawningShape": "Spread",
-    "particleSpawningRadious": 0.5,
-    "particleAmount": 4,
+    "isBonemealable": false,
     "hasInventory": false,
     "guiBoundTo": "<NONE>",
     "openGUIOnRightClick": false,
@@ -126,11 +122,20 @@
     "onEntityCollides": {
       "name": "Level1tp"
     },
-    "spawnWorldTypes": [],
+    "generateFeature": false,
     "restrictionBiomes": [],
     "blocksToReplace": [
       {
-        "value": "Blocks.STONE"
+        "value": "Blocks.STONE#0"
+      },
+      {
+        "value": "Blocks.STONE#1"
+      },
+      {
+        "value": "Blocks.STONE#3"
+      },
+      {
+        "value": "Blocks.STONE#5"
       }
     ],
     "generationShape": "UNIFORM",

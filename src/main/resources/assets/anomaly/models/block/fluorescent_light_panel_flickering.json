@@ -1,7 +1,8 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "anomaly:blocks/flicker-1.png",
-    "particle": "anomaly:blocks/flicker-1.png"
-  }
+    "all": "anomaly:block/flicker-1.png",
+    "particle": "anomaly:block/flicker-1.png"
+  },
+  "render_type": "solid"
 }

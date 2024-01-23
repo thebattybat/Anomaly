@@ -1,8 +1,9 @@
 {
   "parent": "block/inner_stairs",
   "textures": {
-    "bottom": "anomaly:blocks/imageedit_9_3979800100_16x16-2.png",
-    "top": "anomaly:blocks/imageedit_9_3979800100_16x16-2.png",
-    "side": "anomaly:blocks/imageedit_9_3979800100_16x16-2.png"
-  }
+    "bottom": "anomaly:block/imageedit_9_3979800100_16x16-2.png",
+    "top": "anomaly:block/imageedit_9_3979800100_16x16-2.png",
+    "side": "anomaly:block/imageedit_9_3979800100_16x16-2.png"
+  },
+  "render_type": "solid"
 }

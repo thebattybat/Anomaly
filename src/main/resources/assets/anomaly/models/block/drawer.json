@@ -1,12 +1,13 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "anomaly:blocks/new_piskel-1.png_5",
-    "up": "anomaly:blocks/new_piskel-1.png_5",
-    "north": "anomaly:blocks/new_piskel-2.png_4",
-    "east": "anomaly:blocks/new_piskel-1.png_5",
-    "south": "anomaly:blocks/new_piskel-1.png_5",
-    "west": "anomaly:blocks/new_piskel-1.png_5",
-    "particle": "anomaly:blocks/new_piskel-1.png_5"
-  }
+    "down": "anomaly:block/new_piskel-1.png_5",
+    "up": "anomaly:block/new_piskel-1.png_5",
+    "north": "anomaly:block/new_piskel-2.png_4",
+    "east": "anomaly:block/new_piskel-1.png_5",
+    "south": "anomaly:block/new_piskel-1.png_5",
+    "west": "anomaly:block/new_piskel-1.png_5",
+    "particle": "anomaly:block/new_piskel-1.png_5"
+  },
+  "render_type": "solid"
 }

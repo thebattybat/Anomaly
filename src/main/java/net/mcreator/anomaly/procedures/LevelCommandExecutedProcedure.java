@@ -12,8 +12,8 @@ import net.minecraft.network.protocol.game.ClientboundUpdateMobEffectPacket;
 import net.minecraft.network.protocol.game.ClientboundPlayerAbilitiesPacket;
 import net.minecraft.network.protocol.game.ClientboundLevelEventPacket;
 import net.minecraft.network.protocol.game.ClientboundGameEventPacket;
-import net.minecraft.network.chat.TextComponent;
-import net.minecraft.core.Registry;
+import net.minecraft.network.chat.Component;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.core.BlockPos;
 
 import java.util.HashMap;
@@ -23,9 +23,9 @@ public class LevelCommandExecutedProcedure {
 		if (entity == null || cmdparams == null)
 			return;
 		if ((cmdparams.containsKey("0") ? cmdparams.get("0").toString() : "").equals("0")) {
-			if (entity instanceof ServerPlayer _player && !_player.level.isClientSide()) {
-				ResourceKey<Level> destinationType = ResourceKey.create(Registry.DIMENSION_REGISTRY, new ResourceLocation("anomaly:level_0"));
-				if (_player.level.dimension() == destinationType)
+			if (entity instanceof ServerPlayer _player && !_player.level().isClientSide()) {
+				ResourceKey<Level> destinationType = ResourceKey.create(Registries.DIMENSION, new ResourceLocation("anomaly:level_0"));
+				if (_player.level().dimension() == destinationType)
 					return;
 				ServerLevel nextLevel = _player.server.getLevel(destinationType);
 				if (nextLevel != null) {
@@ -44,9 +44,9 @@ public class LevelCommandExecutedProcedure {
 					_serverPlayer.connection.teleport(0, 34, 0, _ent.getYRot(), _ent.getXRot());
 			}
 		} else if ((cmdparams.containsKey("0") ? cmdparams.get("0").toString() : "").equals("1")) {
-			if (entity instanceof ServerPlayer _player && !_player.level.isClientSide()) {
-				ResourceKey<Level> destinationType = ResourceKey.create(Registry.DIMENSION_REGISTRY, new ResourceLocation("anomaly:level_1"));
-				if (_player.level.dimension() == destinationType)
+			if (entity instanceof ServerPlayer _player && !_player.level().isClientSide()) {
+				ResourceKey<Level> destinationType = ResourceKey.create(Registries.DIMENSION, new ResourceLocation("anomaly:level_1"));
+				if (_player.level().dimension() == destinationType)
 					return;
 				ServerLevel nextLevel = _player.server.getLevel(destinationType);
 				if (nextLevel != null) {
@@ -65,8 +65,8 @@ public class LevelCommandExecutedProcedure {
 					_serverPlayer.connection.teleport(0, 131, 0, _ent.getYRot(), _ent.getXRot());
 			}
 		} else {
-			if (entity instanceof Player _player && !_player.level.isClientSide())
-				_player.displayClientMessage(new TextComponent("Invalid Level!"), (true));
+			if (entity instanceof Player _player && !_player.level().isClientSide())
+				_player.displayClientMessage(Component.literal("Invalid Level!"), true);
 		}
 	}
 }

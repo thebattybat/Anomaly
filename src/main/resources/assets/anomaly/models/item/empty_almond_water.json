@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "anomaly:items/aw0-2.png"
+    "layer0": "anomaly:item/aw0-2.png"
   }
 }

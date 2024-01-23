@@ -1,23 +1,21 @@
 modLoader="javafml"
-loaderVersion="[40,)"
+loaderVersion="[47,)"
 license="Academic Free License v3.0"
 
 [[mods]]
 modId="anomaly"
 version="1.0.0"
 displayName="Anomaly"
-credits="This mod was made using MCreator: https://mcreator.net/about"
 displayURL="https://mcreator.net"
 logoFile="logo.png"
+credits="This mod was made using MCreator: https://mcreator.net/about"
 authors="themcrau1"
-description='''
-Endless rooms to explore
-'''
+description="Endless rooms to explore"
 
 [[dependencies.anomaly]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.18.2]"
+    versionRange="[1.20.1]"
     ordering="NONE"
     side="BOTH"
 

@@ -7,10 +7,6 @@ package net.mcreator.anomaly.init;
 import net.minecraftforge.registries.RegistryObject;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.level.block.Block;
 
@@ -48,18 +44,15 @@ import net.mcreator.anomaly.AnomalyMod;
 
 public class AnomalyModBlocks {
 	public static final DeferredRegister<Block> REGISTRY = DeferredRegister.create(ForgeRegistries.BLOCKS, AnomalyMod.MODID);
-	public static final RegistryObject<Block> FLUORESCENT_LIGHT_PANEL = REGISTRY.register("fluorescent_light_panel",
-			() -> new FluorescentLightPanelBlock());
-	public static final RegistryObject<Block> FLUORESCENT_LIGHT_PANEL_FLICKERING = REGISTRY.register("fluorescent_light_panel_flickering",
-			() -> new FluorescentLightPanelFlickeringBlock());
+	public static final RegistryObject<Block> FLUORESCENT_LIGHT_PANEL = REGISTRY.register("fluorescent_light_panel", () -> new FluorescentLightPanelBlock());
+	public static final RegistryObject<Block> FLUORESCENT_LIGHT_PANEL_FLICKERING = REGISTRY.register("fluorescent_light_panel_flickering", () -> new FluorescentLightPanelFlickeringBlock());
 	public static final RegistryObject<Block> WALLPAPER = REGISTRY.register("wallpaper", () -> new WallpaperBlock());
 	public static final RegistryObject<Block> PLACER = REGISTRY.register("placer", () -> new PlacerBlock());
 	public static final RegistryObject<Block> INFECTED_WALLPAPER = REGISTRY.register("infected_wallpaper", () -> new InfectedWallpaperBlock());
 	public static final RegistryObject<Block> INFECTED_CARPET = REGISTRY.register("infected_carpet", () -> new InfectedCarpetBlock());
 	public static final RegistryObject<Block> INFECTED_TILE = REGISTRY.register("infected_tile", () -> new InfectedTileBlock());
 	public static final RegistryObject<Block> MOLD = REGISTRY.register("mold", () -> new MoldBlock());
-	public static final RegistryObject<Block> LEVEL_0_EXIT_TO_LEVEL_1 = REGISTRY.register("level_0_exit_to_level_1",
-			() -> new Level0ExitToLevel1Block());
+	public static final RegistryObject<Block> LEVEL_0_EXIT_TO_LEVEL_1 = REGISTRY.register("level_0_exit_to_level_1", () -> new Level0ExitToLevel1Block());
 	public static final RegistryObject<Block> EXIT_SIGN = REGISTRY.register("exit_sign", () -> new ExitSignBlock());
 	public static final RegistryObject<Block> TUBE_LIGHT = REGISTRY.register("tube_light", () -> new TubeLightBlock());
 	public static final RegistryObject<Block> WHITE_BRICKS = REGISTRY.register("white_bricks", () -> new WhiteBricksBlock());
@@ -73,8 +66,7 @@ public class AnomalyModBlocks {
 	public static final RegistryObject<Block> WHITE_CEMENT = REGISTRY.register("white_cement", () -> new WhiteCementBlock());
 	public static final RegistryObject<Block> LEVEL_1_PLACER = REGISTRY.register("level_1_placer", () -> new Level1PlacerBlock());
 	public static final RegistryObject<Block> PARKING_PLACER = REGISTRY.register("parking_placer", () -> new ParkingPlacerBlock());
-	public static final RegistryObject<Block> IMMEDIATE_PARKING_PLACER = REGISTRY.register("immediate_parking_placer",
-			() -> new ImmediateParkingPlacerBlock());
+	public static final RegistryObject<Block> IMMEDIATE_PARKING_PLACER = REGISTRY.register("immediate_parking_placer", () -> new ImmediateParkingPlacerBlock());
 	public static final RegistryObject<Block> CARPET_STAIRS = REGISTRY.register("carpet_stairs", () -> new CarpetStairsBlock());
 	public static final RegistryObject<Block> DRAWER = REGISTRY.register("drawer", () -> new DrawerBlock());
 	public static final RegistryObject<Block> DESKTOP = REGISTRY.register("desktop", () -> new DesktopBlock());
@@ -82,15 +74,4 @@ public class AnomalyModBlocks {
 	public static final RegistryObject<Block> NULL_BLOCK = REGISTRY.register("null_block", () -> new NullBlockBlock());
 	public static final RegistryObject<Block> CARPET = REGISTRY.register("carpet", () -> new CarpetBlock());
 	public static final RegistryObject<Block> TILE = REGISTRY.register("tile", () -> new TileBlock());
-
-	@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
-	public static class ClientSideHandler {
-		@SubscribeEvent
-		public static void clientSetup(FMLClientSetupEvent event) {
-			ExitSignBlock.registerRenderLayer();
-			TubeLightBlock.registerRenderLayer();
-			MetalDoorBlock.registerRenderLayer();
-			ChairBlock.registerRenderLayer();
-		}
-	}
 }

@@ -1,8 +1,9 @@
 {
   "parent": "anomaly:custom/exite",
   "textures": {
-    "all": "anomaly:blocks/texture_9",
-    "particle": "anomaly:blocks/texture_9",
-    "1": "anomaly:blocks/texture_9"
-  }
+    "all": "anomaly:block/texture_9",
+    "particle": "anomaly:block/texture_9",
+    "1": "anomaly:block/texture_9"
+  },
+  "render_type": "solid"
 }

@@ -1,6 +1,7 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "anomaly:items/new_piskel-2.png_3-1.png_1"
-  }
+    "layer0": "anomaly:item/new_piskel-2.png_3-1.png_1"
+  },
+  "render_type": "translucent"
 }

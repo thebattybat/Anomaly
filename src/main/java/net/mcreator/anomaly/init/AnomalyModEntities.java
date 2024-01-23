@@ -22,13 +22,11 @@ import net.mcreator.anomaly.AnomalyMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class AnomalyModEntities {
-	public static final DeferredRegister<EntityType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.ENTITIES, AnomalyMod.MODID);
-	public static final RegistryObject<EntityType<BackroomsEntityEntity>> MOLD_CREATURE = register("mold_creature",
-			EntityType.Builder.<BackroomsEntityEntity>of(BackroomsEntityEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
-					.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(BackroomsEntityEntity::new).fireImmune().sized(0.6f, 3f));
+	public static final DeferredRegister<EntityType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, AnomalyMod.MODID);
+	public static final RegistryObject<EntityType<BackroomsEntityEntity>> MOLD_CREATURE = register("mold_creature", EntityType.Builder.<BackroomsEntityEntity>of(BackroomsEntityEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+			.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(BackroomsEntityEntity::new).fireImmune().sized(0.6f, 3f));
 	public static final RegistryObject<EntityType<SmilerEntity>> SMILER = register("smiler",
-			EntityType.Builder.<SmilerEntity>of(SmilerEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
-					.setUpdateInterval(3).setCustomClientFactory(SmilerEntity::new).fireImmune().sized(0.6f, 3f));
+			EntityType.Builder.<SmilerEntity>of(SmilerEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(SmilerEntity::new).fireImmune().sized(0.6f, 3f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
